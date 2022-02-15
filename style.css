@@ -1,8 +1,8 @@
 nav.nav1{
-    color: rgb(241, 234, 237);
-    font-size: 40px;
+    color: rgb(12, 2, 6);
+    font-size: 25px;
     margin: 0px;
-    background-color: rgb(240, 147, 186);
+    background-color: rgb(226, 118, 230);
     text-align: left;
     word-spacing: 60px;
     text-indent: 40px;
@@ -11,19 +11,19 @@ nav.nav1{
 }
 
 nav.nav2{
-    color: rgb(241, 234, 237);
-    font-size: 30px;
-    /* margin: 0px; */
-    background-color: rgb(240, 147, 186);
+    color: rgb(17, 5, 10);
+    font-size: 20px;
+    /* margin:0px; */
+    background-color: rgb(226, 118, 230);
     /* text-align: left; */
     text-indent: 1420px;
     /* line-height: 70px;  */
-    padding:  15px;
-    position: absolute;
-    bottom: 0px;
+    padding:  5px;
+    /* position: absolute;
+    bottom: px; */
+    
    
 }
-
 
 
 input[type=text], select {
@@ -36,7 +36,7 @@ input[type=text], select {
 
 input[type=submit] {
     width: 120px;
-    background-color: #275227;
+    background-color: #522752;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -94,10 +94,29 @@ input[type=submit] {
 
   }
 
-  .five{
+  
+
+  .butt{
     position:absolute;
-    right: 700px;
+    right: 550px;
     top: 300px;
 
   }
 
+  .five{
+    position:absolute;
+    left: 400px;
+    top: 300px;
+
+  }
+
+  fieldset{
+      background-color: darkgrey;
+  }
+
+
+  .output{
+      width: 400px;
+      height: 400px;
+    
+  }

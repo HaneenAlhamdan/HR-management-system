@@ -7,10 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./js/app.js"></script>
+   
 </head>
 
 <body>
+    <style>
+        body {
+          height: 3000px;
+        
+        }
+        </style>
     <header>
         <nav class="nav1">
 
@@ -18,24 +24,24 @@
             <a href="accounting.html">Accounting</a>
 
         </nav>
-
+        
     </header>
 
     <main>
         <fieldset>
         <legend>Add anew employee!</legend>
-        <form action="" id="add-anew-employee">
+        <form action="" id="form">
 
         <div class="div1">
 
            <div class="one"> 
                <label for="">Full Name</label><br>
-            <input type="text" value="" ><br>
+            <input type="text" id="full_Name"><br>
         </div>
 
            <div class="tow"> 
                <br><label for="">Department</label><br>
-            <select id="Department" name="Department">
+            <select id="department" name="Department">
                 <option value="Administration">Administration</option>
                 <option value="Marketing">Marketing</option>
                 <option value="Development">Development</option>
@@ -46,12 +52,12 @@
         </div>
         <div class="three">
             <br><label for="">Image link</label><br>
-            <input type="text" value=""><br>
+            <input type="text" id="imag"><br>
         </div>
 
         <div class="four">
             <br><label for="">Level</label><br>
-            <select id="Level" name="Level">
+            <select id="level" name="Level">
                 <option value="Junior">Junior</option>
                 <option value="Mid-Senior">Mid-Senior</option>
                 <option value="Senior">Senior</option>
@@ -59,9 +65,24 @@
         </div>
 
 
-        <div class="five">
-            <br> <input type="submit" value="Submit"><br><br><br>
+        <div class="butt">
+            <br> <input type="submit" id="submit"><br><br><br>
         </div>
+
+    </div>
+    <div class="five">
+        <br><label for="">Salary</label><br>
+        <input type="text" value=""><br>
+    </div>
+
+    <div class="output">
+        <fieldset class="output">
+            <span id="result"></span>
+
+    </div>
+    
+
+    </fieldset>
 
         </div>
     </form>
@@ -69,12 +90,20 @@
     </main>
 
     <footer>
-        <nav class="nav2">
+        <!-- <nav class="nav2">
             <a href="https://jo.linkedin.com/company/asacltuc">@ 2022 LTUC All Right Reserved </a>
-        </nav>
+        </nav> -->
 
     </footer>
 
 </body>
+<!-- <script>
+  let calc= Math.floor((Math.random() * 10000)+ 1);
+  console.log(calc);
+</script> -->
 
+<script src="./js/app.js"></script>
 </html>
+
+
+    

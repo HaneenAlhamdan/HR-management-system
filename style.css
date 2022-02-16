@@ -13,16 +13,21 @@ nav.nav1{
 nav.nav2{
     color: rgb(17, 5, 10);
     font-size: 20px;
-    /* margin:0px; */
+    margin:0px;
     background-color: rgb(226, 118, 230);
-    /* text-align: left; */
-    text-indent: 1420px;
+    text-align: center;
+    text-indent: 1460px;
     /* line-height: 70px;  */
     padding:  5px;
-    /* position: absolute;
-    bottom: px; */
+    position: absolute;
+    bottom: 4px;
+    
     
    
+}
+
+.bottom{
+  
 }
 
 

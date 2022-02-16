@@ -1,26 +1,5 @@
 "Use strict";
 
-// function Salary()
-// {
-//     let maximm;
-//     let minimm;
-//      for( let i = 0 ;i <emploe ;i++){
-// if (this.Level == "Senior")
-// {
-//     maximm=2000;
-//     minimm=1500;
-// }
-// else if(this.Level == "Mid-Senior")
-// {
-//     maximm=1500;
-//     minimm=1000;   
-// }
-// else (this.Level == "Junior")
-// {
-//     maximm=1000;
-//     minimm=500;   
-// }
-// }
 var emploe = [ ] ;
 function emploees(Employee_ID , Full_Name , Department , Level, Image ,Salary )
 {
@@ -81,41 +60,25 @@ let Hadi_Ahmad = new emploees (1006 ,"Hadi Ahmad" , "Finance ", "Mid-Senior" ,"U
  for(let x=0 ; x< emploe.length; x++)
  {
     emploees. prototype. render = function(){
-        document.write(`<h2 style ="margin-bottom : 0px ; color: rgb(62, 6, 114) ; ">${this.Full_Name}: ${this.Salary}</h4>`);
+        document.write(`<h4 style ="margin-bottom : 0px ; color: rgb(62, 6, 114) ; "> Employee name :${this.Full_Name} --- Employee salary : ${this.Salary}</h4>`);
         };
-(`<h5 style=`)
+
      emploe[x].getSalary();
      emploe[x].render();
  };
 
  //////////////////////////////////////////////////////////////////////////////
- let employee_id  = function(start,range){
-    let getRandoom = Math.floor((Math.random() * range)+ start);
-    while( employee_id  > range){
-        getRandoom = Math.floor((Math.random() * range)+ start);
-    }
-    return getRandoom;
+//  let employee_id  = function(start,range){
+//     let getRandoom = Math.floor((Math.random() * range)+ start);
+//     while( employee_id  > range){
+//         getRandoom = Math.floor((Math.random() * range)+ start);
+//     }
+//     return getRandoom;
 
-};
+// };
 
-console.log(employee_id(1000,9000));
+// console.log(employee_id(1000,9000));
 
-////////////////////////////////////////////////////////////////////////////////
-
-// const form = document.querySelector('.form');
-//     submitInput= form[0].querySelector('input[type="submit"');
-// function getDataForm (h){
-//     h.preventDafault();
-//     var formData = new formData(form[0]);
-
-//     alert(formData.get('Full Name') + '-' + formData.get('Department') 
-//     + '-' + formData.get('Image link') + '-' + formData.get('Level') 
-//     + '-' + formData.get('Salary') );
-// }
-
-// document.addEventListener('loded' , function(){
-//    submitInput.addEventListener( 'click', getDataForm, false);
-//    } ,false);
 
 ////////////////////////////////////////////////////////////////////////////////////////
 function clickhand(event){
@@ -150,20 +113,20 @@ form.addEventListener('submit', clickhand)
 /////////////////////////////////////////////////////////////////////////////////////////
 
 
-var submit=document.getElementById("submit");
-submit.addEventListener("click", displayDatails);
+// var submit=document.getElementById("submit");
+// submit.addEventListener("click", displayDatails);
 
-var card=1;
+// var card=1;
 
-function displayDatails(){
-    var Full_Name= document.getElementById("Full_Name").value;
-    var department= document.getElementById("department").value;
-    var imag= document.getElementById("imag").value;
-    var level= document.getElementById("level").value;
-    // var Salary= document.getElementById("getSalary()").value;
+// function displayDatails(){
+//     var Full_Name= document.getElementById("Full_Name").value;
+//     var department= document.getElementById("department").value;
+//     var imag= document.getElementById("imag").value;
+//     var level= document.getElementById("level").value;
+//     // var Salary= document.getElementById("getSalary()").value;
     
-    document.getElementById('result').innerHTML=(`${Full_Name} + ${department} + ${imag} + ${level}`);
+//     document.getElementById('result').innerHTML=(`${Full_Name} + ${department} + ${imag} + ${level}`);
 
    
 
-}
+// }

@@ -1,5 +1,5 @@
 nav.nav1{
-    color: rgb(12, 2, 6);
+    color: rgb(255, 255, 255);
     font-size: 25px;
     margin: 0px;
     background-color: rgb(226, 118, 230);
@@ -11,7 +11,7 @@ nav.nav1{
 }
 
 nav.nav2{
-    color: rgb(17, 5, 10);
+    color: rgb(255, 251, 253);
     font-size: 20px;
     /* margin:0px; */
     background-color: rgb(226, 118, 230);
@@ -120,3 +120,30 @@ input[type=submit] {
       height: 400px;
     
   }
+ .nav3{
+  color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin: 0px;
+    background-color: rgb(226, 118, 230);
+    text-align: left;
+    word-spacing: 60px;
+    text-indent: 40px;
+    line-height: 50px;
+    padding:  15px;
+ }
+
+
+  /* .nav4{ 
+   color: rgb(255, 255, 255); 
+   font-size: 25px;
+  margin: 0px;
+  background-color: rgb(226, 118, 230); 
+  text-align: center;
+  text-indent: 40px;
+  line-height: 50px;
+  padding:  15px;
+  bottom: 100px; 
+   
+ } */
+
+ 

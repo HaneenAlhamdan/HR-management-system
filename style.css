@@ -139,10 +139,10 @@ input[type=submit] {
 
 
   
- table{
+  table{
    border-collapse: collapse;
    background-color: #eccdec;
-   width: 50%;
+   width: 60%;
    margin: 50px auto;
 
 
@@ -162,5 +162,6 @@ input[type=submit] {
  td{
    font-size: 19px;
    font-weight: 100;
- }
+ } 
+ 
  

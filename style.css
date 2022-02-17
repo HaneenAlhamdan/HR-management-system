@@ -133,22 +133,29 @@ input[type=submit] {
  }
 
 
-  /* .nav4{ 
-   color: rgb(255, 255, 255); 
-   font-size: 25px;
-  margin: 0px;
-  background-color: rgb(226, 118, 230); 
-  text-align: center;
-  text-indent: 40px;
-  line-height: 50px;
-  padding:  15px;
-  bottom: 100px; 
-   
- } */
- /* table{
+  
+ table{
    border-collapse: collapse;
+   background-color: #eccdec;
    width: 50%;
+   margin: 50px auto;
 
- } */
 
+ }
+ 
+ table ,th , td{
+   border: 2px solid gray;
+   padding: 13px;
+ }
+
+ th{
+   font-size: 23px;
+   font-weight: 700;
+
+ }
+
+ td{
+   font-size: 19px;
+   font-weight: 100;
+ }
  

@@ -1,163 +1,161 @@
 nav.nav1{
-    color: rgb(255, 255, 255);
-    font-size: 25px;
-    margin: 0px;
-    background-color: rgb(226, 118, 230);
-    text-align: left;
-    word-spacing: 60px;
-    text-indent: 40px;
-    line-height: 50px;
-    padding:  15px;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  margin: 0px;
+  background-color: rgb(226, 118, 230);
+  text-align: left;
+  word-spacing: 60px;
+  text-indent: 40px;
+  line-height: 50px;
+  padding:  15px;
 }
 
 nav.nav2{
-    color: rgb(255, 251, 253);
-    font-size: 20px;
-    margin:0px;
-    background-color: rgb(226, 118, 230);
-    text-align: center;
-    text-indent: 1460px;
-    /* line-height: 70px;  */
-    padding:  5px;
-    position: absolute;
-    bottom: 4px;
-    
-    
-   
+  color: rgb(255, 251, 253);
+  font-size: 20px;
+  margin:0px;
+  background-color: rgb(226, 118, 230);
+  text-align: center;
+  text-indent: 1460px;
+  /* line-height: 70px;  */
+  padding:  5px;
+  position:fixed;
+  bottom: 4px;
+  
+  
+ 
 }
 
 
 input[type=text], select {
-    width: 300px;
-    padding: 9px;
-    margin: 6px;
-    position:inherit;
-   
+  width: 300px;
+  padding: 9px;
+  margin: 6px;
+  position:inherit;
+ 
 }
 
 input[type=submit] {
-    width: 120px;
-    background-color: #522752;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  div.div1 {
-    /* border: 2px solid rgb(8, 8, 8); */
-  padding: 5px;
-  height: 320px;
-  width: 500px;
-  margin: auto;
+  width: 120px;
+  background-color: #522752;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
   
-     
-  }
-  
-  legend{
-      text-align: center;
-  }
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div.div1 {
+  /* border: 2px solid rgb(8, 8, 8); */
+padding: 5px;
+height: 320px;
+width: 500px;
+margin: auto;
+
+   
+}
+
+legend{
+    text-align: center;
+}
 
 
-  fieldset{
-      width: 800px;
-      height: 300px;
-      margin:auto ;
-  }
+fieldset{
+    width: 800px;
+    height: 300px;
+    margin:auto ;
+}
 
-  .one{
-      position:absolute;
-      left: 400px;
-      /* top: 100px; */
-      
-  }
-
-  .tow{
-    position:absolute;
-    right: 650px;
-    top: 100px;
-
-  }
-
-  .three{
+.one{
     position:absolute;
     left: 400px;
-    top: 200px;
-
-  }
-
-  .four{
-    position:absolute;
-    right: 690px;
-    top: 200px;
-
-  }
-
-  
-
-  .butt{
-    position:absolute;
-    right: 550px;
-    top: 300px;
-
-  }
-
-  .five{
-    position:absolute;
-    left: 400px;
-    top: 300px;
-
-  }
-
-  fieldset{
-      background-color: darkgrey;
-  }
-
-
-  .output{
-      width: 400px;
-      height: 400px;
+    /* top: 100px; */
     
-  }
- .nav3{
-  color: rgb(255, 255, 255);
-    font-size: 25px;
-    margin: 0px;
-    background-color: rgb(226, 118, 230);
-    text-align: left;
-    word-spacing: 60px;
-    text-indent: 40px;
-    line-height: 50px;
-    padding:  15px;
- }
+}
+
+.tow{
+  position:absolute;
+  right: 650px;
+  top: 100px;
+
+}
+
+.three{
+  position:absolute;
+  left: 400px;
+  top: 200px;
+
+}
+
+.four{
+  position:absolute;
+  right: 690px;
+  top: 200px;
+
+}
 
 
+
+.butt{
+  position:absolute;
+  right: 550px;
+  top: 300px;
+
+}
+
+.five{
+  position:absolute;
+  left: 400px;
+  top: 300px;
+
+}
+
+fieldset{
+    background-color: darkgrey;
+}
+
+
+.output{
+    width: 400px;
+    height: 400px;
   
-  table{
-   border-collapse: collapse;
-   background-color: #eccdec;
-   width: 60%;
-   margin: 50px auto;
+}
+.nav3{
+color: rgb(255, 255, 255);
+  font-size: 25px;
+  margin: 0px;
+  background-color: rgb(226, 118, 230);
+  text-align: left;
+  word-spacing: 60px;
+  text-indent: 40px;
+  line-height: 50px;
+  padding:  15px;
+}
 
 
- }
- 
- table ,th , td{
-   border: 2px solid gray;
-   padding: 13px;
- }
 
- th{
-   font-size: 23px;
-   font-weight: 700;
+table{
+ border-collapse: collapse;
+ background-color: #eccdec;
+ width: 60%;
+ margin: 50px auto;
 
- }
 
- td{
-   font-size: 19px;
-   font-weight: 100;
- } 
- 
- 
+}
+
+table ,th , td{
+ border: 2px solid gray;
+ padding: 13px;
+}
+
+th{
+ font-size: 23px;
+ font-weight: 700;
+
+}
+
+td{
+ font-size: 19px;
+ font-weight: 100;
+} 

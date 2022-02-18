@@ -12,9 +12,9 @@ function Emploees(Full_Name, Department, Level, Image, Salary) {
     this.Level = Level;
     this.Image = Image;
     this.Salary = 0;
-
-var emploe = [ ] ;
-function emploees(Employee_ID , Full_Name , Department , Level, Image ,Salary )
+emploe.push(this);
+}
+function Emploees(Employee_ID , Full_Name , Department , Level, Image ,Salary )
 {
     this.Employee_ID= Employee_ID;
     this.Full_Name=Full_Name;
@@ -45,7 +45,7 @@ Emploees.prototype.getSalary = function () {
         maximm = 1000;
         minimm = 500;
     }
-    console.log(maximm, minimm)
+    // console.log(maximm, minimm)
     let totalsal = gtrndinteger(minimm, maximm);
     this.Salary = totalsal - totalsal * 0.075;
 
@@ -57,8 +57,8 @@ function gtrndinteger(minimm, maximm) {
 
 ////////////////////////////////////////////////////////////////////////
 Emploees.prototype.generateUniqueID = function () {
-    this.Employee_ID = 1000 + emploe.length;
-
+  this.Employee_ID = 1000 + emploe.length;
+}
 
 
 
@@ -66,26 +66,32 @@ Emploees.prototype.showCard = function () {
     // console.log("hello");
     let divToShow =document.createElement("div");
     divToShow.id="Show";
+    
     let imageE=document.createElement("img");
      imageE.setAttribute("src",this.Image);
      divToShow.appendChild(imageE); 
+
     let title = document.createElement("h3");
      title.textContent="Name :"+this.Full_Name;
      divToShow.appendChild(title);
+
      let title1=document.createElement("h3");
      title1.textContent="ID :"+this.Employee_ID;
      divToShow.appendChild(title1);
+
      let title2=document.createElement("h3");
      title2.textContent="Department :"+this.Department;
      divToShow.appendChild(title2);
+
      let title3=document.createElement("h3");
      title3.textContent="level :"+this.Level;
      divToShow.appendChild(title3);
+
      let title4=document.createElement("h3");
      title4.textContent="Slary :"+this.Salary;
      divToShow.appendChild(title4);
 
-
+     console.log(this.level);
      continer.appendChild(divToShow);
 
 }
@@ -100,17 +106,6 @@ Emploees.prototype.render = function () {
     // document.write(`<h4 style ="margin-bottom : 0px ; color: rgb(62, 6, 114) ; ">Employee ID : ${this.Employee_ID} --- Employee name :${this.Full_Name} --- Employee salary : ${this.Salary}</h4>`);
 };
 
-//////////////////////////////////////////////////////////////////////////////
-//   employee_id= function(start,range){
-//     let getRandoom = Math.floor((Math.random() * range)+ start);
-//     while( Employee_ID  > range){
-//         getRandoom = Math.floor((Math.random() * range)+ start);
-//     }
-//     return getRandoom;
-
-// };
-
-// console.log(employee_id(1000,9000));
 
 /////////////////////////////////////////////////////////////////////////////
 if (localStorage.getItem("employee")==null) {
@@ -131,33 +126,9 @@ Hadi_Ahmad.render();
 
 
 saveForm();
-console.log(emploe);
-
- console .log(emploe);
- for(let x=0 ; x< emploe.length; x++)
- {
-    emploees. prototype. render = function(){
-        document.write(`<h4 style ="margin-bottom : 0px ; color: rgb(62, 6, 114) ; "> Employee name :${this.Full_Name} --- Employee salary : ${this.Salary}</h4>`);
-        };
-
-     emploe[x].getSalary();
-     emploe[x].render();
- };
-
- //////////////////////////////////////////////////////////////////////////////
-//  let employee_id  = function(start,range){
-//     let getRandoom = Math.floor((Math.random() * range)+ start);
-//     while( employee_id  > range){
-//         getRandoom = Math.floor((Math.random() * range)+ start);
-//     }
-//     return getRandoom;
-
-// };
-
-// console.log(employee_id(1000,9000));
-
-
-}else{
+// console.log(emploe);
+}
+else{
     
     let emploe = localStorage.getItem("emploe");
     let employee = JSON.parse(emploe);
@@ -172,17 +143,23 @@ console.log(emploe);
 
 }
 
+ 
+ for(let x=0 ; x< emploe.length; x++)
+ {
+    Emploees. prototype. render = function(){
+        document.write(`<h4 style ="margin-bottom : 0px ; color: rgb(62, 6, 114) ; "> Employee name :${this.Full_Name} --- Employee salary : ${this.Salary}</h4>`);
+        }
 
-// for (let x = 0; x < emploe.length; x++) {
-   
-    
-//     emploe[x].render();
-//     // emploe[x].generateUniqueID();
-//     // console.log(emploe[x]);
-//     // emploe[x].showCard();
-//     // emploe[x].gg();
+     emploe[x].getSalary();
+     emploe[x].render();
+ }
 
-// };
+ //////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
 
 
 function clickhand(event) {
@@ -214,47 +191,7 @@ function saveForm() {
     let stringfiedEmployees = JSON.stringify(emploe)
     localStorage.setItem("emploe" , stringfiedEmployees);
 
-    for (let i = 0; i < showemploe.length; i++) {
-        showemploe[i].showCard();
-}}
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-// var submit=document.getElementById("submit");
-// submit.addEventListener("click", displayDatails);
-
-// var card=1;
-
-// function displayDatails(){
-//     var Full_Name= document.getElementById("Full_Name").value;
-//     var department= document.getElementById("department").value;
-//     var imag= document.getElementById("imag").value;
-//     var level= document.getElementById("level").value;
-//     // var Salary= document.getElementById("getSalary()").value;
-    
-//     document.getElementById('result').innerHTML=(`${Full_Name} + ${department} + ${imag} + ${level}`);
-
-
-// var submit=document.getElementById("submit");
-// submit.addEventListener("click", displayDatails);
-
-// var card=1;
-
-// function displayDatails(){
-//     var Full_Name= document.getElementById("Full_Name").value;
-//     var department= document.getElementById("department").value;
-//     var imag= document.getElementById("imag").value;
-//     var level= document.getElementById("level").value;
-//     // var Salary= document.getElementById("getSalary()").value;
-
-//     document.getElementById('result').innerHTML=(`${Full_Name} + ${department} + ${imag} + ${level}`);
-
-/////////////////////////////////////////////////////////////////////////////////////
-
-
-
+    for (let X = 0; X < showemploe.length; X++) {
+        showemploe[X].showCard();
+    }
+}

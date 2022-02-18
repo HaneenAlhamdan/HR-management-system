@@ -1,17 +1,4 @@
 "Use strict";
-// var submit= document.getElementById("submit");
-// submit.addEventListener("click",displayinfo);
-
-// var row=1;
-
-// function displayinfo(){
-//     var full_Name=getElementById("full_Name").value;
-//     var Department=getElementById("Department").value;
-//     var full_Name=getElementById("full_Name").value;
-//     var full_Name=getElementById("full_Name").value;
-
-// }
-
 
 
 let divID = document.getElementById("tableDiv");

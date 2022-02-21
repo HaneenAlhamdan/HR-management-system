@@ -7,6 +7,7 @@ let table = document.createElement("table");
 
 
 function createdTable() {
+    
     divID.appendChild(table);
 }
 
@@ -35,14 +36,19 @@ function tableFrame() {
     td.textContent = "Administration";
     tr1.appendChild(td);
     let td1 = document.createElement("td");
-    td1.textContent = numEmployees("Administration");
+    let adminNums = numEmployees("Administration");
+    console.log("adminNums", adminNums); 
+    td1.textContent = adminNums;
     tr1.appendChild(td1);
     let td2 = document.createElement("td");
     td2.textContent = Total_salary("Administration");
     tr1.appendChild(td2);
     let td3 = document.createElement("td");
-    td3.textContent = Total_salary("Administration") / numEmployees("Administration");
+    // console.log("Haneen", Total_salary("Administration"));
+    // console.log("Haneen2", numEmployees("Administration"));
+    td3.textContent = Total_salary("Administration") / adminNums;
     tr1.appendChild(td3);
+    
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -102,14 +108,19 @@ function tableFrame() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function numEmployees(Department) {
-    let numDep1 = 0, numDep2 =0 , numDep3 =0, numDep4 = 0;
+    let numDep1 = 0;
+    let numDep2 = 0;
+    let numDep3 = 0;
+    let numDep4 = 0;
     let emplo = localStorage.getItem("arr");
     // console.log(emplo);
-    let employee = JSON.parse(emplo);
 
+    let employee = JSON.parse(emplo);
+    console.log(employee);
     for (let X = 0; X < employee.length; X++) {
         if (employee[X].Department == "Administration") {
             numDep1++;
+            console.log("numDep1",numDep1);
         }
 
         else if (employee[X].Department == "Marketing") {
@@ -121,6 +132,7 @@ function numEmployees(Department) {
         else if (employee[X].Department == "Finance") {
             numDep4++;
         }
+
         // switch (Department) {
         //     case "Administration":
         //         for (let X = 0; X < employee.length; X++) {
@@ -154,123 +166,138 @@ function numEmployees(Department) {
         //         break;
         // }
         // return numDep;
-    }}
-    
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    function createTableFooter() {
-        let footer = document.createElement("footer");
-        footer.setAttribute("id", "tableFooter");
-        table.appendChild(footer);
-        divID.appendChild(footer);
-        let tr = document.createElement("tr");
-        tr.setAttribute("id", "styleTr");
-        table.appendChild(tr);
-        let th = document.createElement("th");
-        th.textContent = "Total";
-        tr.appendChild(th);
-        //*
-        th = document.createElement("th");
-        th.textContent = numEmployees();
-        tr.appendChild(th);
-        //*
-        th = document.createElement("th");
-        th.textContent = Total_salary();
-        tr.appendChild(th);
-        //*
-        th = document.createElement("th");
-        th.textContent = Total_salary() / numEmployees();
-        tr.appendChild(th);
     }
-    function Total_salary(Department) {
-        let totalSalary = 0;
-        let emplo = localStorage.getItem("arr");
-        let employee = JSON.parse(emplo);
-        switch (Department) {
-            case "Administration":
-                for (let X = 0; X < employee.length; X++) {
-                    if (employee[X].Department == Department) {
-                        totalSalary += employee[X].salary;
-                    }
+    if (Department == "Administration") {
+        console.log(numDep1);
+      return numDep1;
+    }
+
+    else if (Department== "Marketing") {
+        return numDep2;
+    }
+    else if (Department == "Development") {
+        return numDep3;
+    }
+    else if (Department == "Finance") {
+        return numDep4;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function createTableFooter() {
+    let footer = document.createElement("footer");
+    footer.setAttribute("id", "tableFooter");
+    table.appendChild(footer);
+    divID.appendChild(footer);
+    let tr = document.createElement("tr");
+    tr.setAttribute("id", "styleTr");
+    table.appendChild(tr);
+    let th = document.createElement("th");
+    th.textContent = "Total";
+    tr.appendChild(th);
+    //*
+    th = document.createElement("th");
+    th.textContent = numEmployees();
+    tr.appendChild(th);
+    //*
+    th = document.createElement("th");
+    th.textContent = Total_salary();
+    tr.appendChild(th);
+    //*
+    th = document.createElement("th");
+    th.textContent = Total_salary() / numEmployees();
+    tr.appendChild(th);
+}
+function Total_salary(Department) {
+    let totalSalary = 0;
+    let emplo = localStorage.getItem("arr");
+    let employee = JSON.parse(emplo);
+    switch (Department) {
+        case "Administration":
+            for (let X = 0; X < employee.length; X++) {
+                if (employee[X].Department == Department) {
+                    totalSalary += employee[X].Salary;
                 }
-                break;
-            case "Marketing":
-                for (let X = 0; X < employee.length; X++) {
-                    if (employee[X].Department == Department) {
-                        totalSalary += employee[X].salary;
-                    }
+            }
+            break;
+        case "Marketing":
+            for (let X = 0; X < employee.length; X++) {
+                if (employee[X].Department == Department) {
+                    totalSalary += employee[X].Salary;
                 }
-                break;
-            case "Development":
-                for (let X = 0; X < employee.length; X++) {
-                    if (employee[X].Department == Department) {
-                        totalSalary += employee[X].salary;
-                    }
+            }
+            break;
+        case "Development":
+            for (let X = 0; X < employee.length; X++) {
+                if (employee[X].Department == Department) {
+                    totalSalary += employee[X].Salary;
                 }
-                break;
-            case "Finance":
-                for (let X = 0; X < employee.length; X++) {
-                    if (employee[X].Department == Department) {
-                        totalSalary += employee[X].salary;
-                    }
+            }
+            break;
+        case "Finance":
+            for (let X = 0; X < employee.length; X++) {
+                if (employee[X].Department == Department) {
+                    totalSalary += employee[X].Salary;
                 }
-                break;
-            default: null;
-                break;
-        }
-        return totalSalary;
+            }
+            break;
+        default: null;
+            break;
     }
+    return totalSalary;
+}
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////
-    function totalTable() {
-        let lastRow = document.createElement("lastRow");
-        lastRow.setAttribute("id", "tableFooter");
-        table.appendChild(lastRow);
-        divID.appendChild(lastRow);
-        let tr = document.createElement("tr");
-        tr.setAttribute("id", "styleTr");
-        table.appendChild(tr);
-        let th = document.createElement("th");
-        th.textContent = "Total";
-        tr.appendChild(th);
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+function totalTable() {
+    let lastRow = document.createElement("lastRow");
+    lastRow.setAttribute("id", "tableFooter");
+    table.appendChild(lastRow);
+    divID.appendChild(lastRow);
+    let tr = document.createElement("tr");
+    tr.setAttribute("id", "styleTr");
+    table.appendChild(tr);
+    let th = document.createElement("th");
+    th.textContent = "Total";
+    tr.appendChild(th);
 
-        th = document.createElement("th");
-        th.textContent = numEmployees();
-        tr.appendChild(th);
+    th = document.createElement("th");
+    th.textContent = numEmployees();
+    tr.appendChild(th);
 
-        th = document.createElement("th");
-        th.textContent = Total_salary();
-        tr.appendChild(th);
+    th = document.createElement("th");
+    th.textContent = Total_salary();
+    tr.appendChild(th);
 
-        th = document.createElement("th");
-        th.textContent = Total_salary() / numEmployees();
-        tr.appendChild(th);
+    th = document.createElement("th");
+    th.textContent = Total_salary() / numEmployees();
+    tr.appendChild(th);
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////////
+function totalNumDepartment() {
+    let emplo = localStorage.getItem("emploe");
+    let employee = JSON.parse(emplo);
+    return employee.length;
+}
+////////////////////////////////////
+function totalSalaryDepartment() {
+    let totalSalary = 0;
+    let emplo = localStorage.getItem("emploe");
+    let employee = JSON.parse(emplo);
+    for (let X = 0; X < employee.length; X++) {
+        totalSalary += employee[X].Salary;
     }
+    return totalSalary;
+}
 
 
 
 
-    ///////////////////////////////////////////////////////////////////////////
-    function totalNumDepartment() {
-        let emplo = localStorage.getItem("arr");
-        let employee = JSON.parse(emplo);
-        return employee.length;
-    }
-    ////////////////////////////////////
-    function totalSalaryDepartment() {
-        let totalSalary = 0;
-        let emplo = localStorage.getItem("arr");
-        let employee = JSON.parse(emplo);
-        for (let X = 0; X < employee.length; X++) {
-            totalSalary += employee[X].salary;
-        }
-        return totalSalary;
-    }
-
-
-
-
-    createdTable();
-    tableHeader();
-    tableFrame();
-    totalTable();
+createdTable();
+tableHeader();
+tableFrame();
+totalTable();
